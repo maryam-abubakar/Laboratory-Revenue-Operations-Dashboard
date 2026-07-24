@@ -1,10 +1,18 @@
 # Laboratory Revenue and Operations Dashboard 📊🧪
 
+------------------------------------------------------------------------
+
+![Excel](https://img.shields.io/badge/Tool-Microsoft%20Excel-green)
+![Healthcare Analytics](https://img.shields.io/badge/Domain-Healthcare-blue)
+![Data Visualization](https://img.shields.io/badge/Focus-Data%20Visualization-orange)
+
+------------------------------------------------------------------------
+
 ## Project Overview
 
-This project presents an interactive **Laboratory Revenue and Operations
-Dashboard** developed using **Microsoft Excel PivotTables, PivotCharts,
-and Slicers**.
+This project presents an interactive **Laboratory Revenue and Operations Dashboard**
+developed using **Microsoft Excel PivotTables**, **PivotCharts**, **Slicers**, and 
+**KPI cards** to analyze laboratory revenue and operational performance.
 
 The dashboard analyzes laboratory sales and operational data to provide
 insights into revenue performance, test demand, branch performance,
@@ -13,6 +21,15 @@ departmental contribution, and customer distribution.
 The goal of this project is to demonstrate how healthcare laboratory
 data can be transformed into meaningful business insights that support
 data-driven decision-making.
+
+------------------------------------------------------------------------
+
+## Dashboard Analysis
+
+The interactive dashboard provides insights into laboratory revenue 
+performance, test demand, branch contribution, and customer distribution.
+
+![Laboratory Revenue Dashboard](Images/dashboard_preview.png)
 
 ------------------------------------------------------------------------
 
@@ -96,8 +113,6 @@ Features include:
 
 ------------------------------------------------------------------------
 
-## Dashboard Analysis
-
 ### Revenue Analysis
 
 Analyzes monthly revenue trends and financial performance.
@@ -149,15 +164,6 @@ Laboratory-Revenue-Dashboard/
 
 ------------------------------------------------------------------------
 
-## Dashboard Preview
-
-The interactive dashboard provides insights into laboratory revenue 
-performance, test demand, branch contribution, and customer distribution.
-
-![Laboratory Revenue Dashboard](Images/dashboard_preview.png)
-
-------------------------------------------------------------------------
-
 ## Future Improvements
 
 -   Connect dashboard to a live laboratory database.
@@ -174,3 +180,4 @@ performance, test demand, branch contribution, and customer distribution.
 Medical Laboratory Scientist \| Aspiring Healthcare Data Analyst
 
 Tools: Microsoft Excel \| Data Visualization \| Healthcare Analytics
+Portfolio: https://maryam-abubakar.github.io/
