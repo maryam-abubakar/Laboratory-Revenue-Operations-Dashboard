@@ -1,54 +1,109 @@
-## SQL Analysis
+--
+---------------------------------------------------------
+-- Laboartory Sales Analysis Project
+-- SQL Analysis of Diagnostic Test Revenue
+-- Author: Maryam Abubakar
+-- Tool: MySQL
+--
+---------------------------------------------------------
 
-SQL was used to analyse the laboratory sales dataset and extract meaningful 
-business insights related to revenue performance, diagnostic test demand,
-and operational trends.
 
-### SQL Objectives
+---------------------------------------------------------
+-- 1. Total Revenue
 
-The analysis aimed to answer key business questions:
+SELECT
+SUM(Revenue_NGN) as Total_Revenue
+FROM laboratory_sales_data;
 
-- What is the total revenue generated from laboratory transactions?
-- How many laboratory tests were performed?
-- Which diagnostic tests are most frequently requested?
-- Which tests generate the highest revenue?
-- What is the average revenue per test?
-- Which laboratory branches contribute the most revenue?
-- How does revenue change monthly?
+---------------------------------------------------------
 
-### SQL Queries Performed
 
-The following analyses were performed using MySQL:
+---------------------------------------------------------
+-- 2. Total Number of Tests
 
-1. **Total Revenue Analysis**
-   - Calculated the overall revenue generated from laboratory transactions.
+SELECT
+COUNT(*) AS Total_Tests
+FROM laboratory_sales_data;
 
-2. **Test Volume Analysis**
-   - Counted the total number of laboratory tests performed.
-   - Identified the most requested diagnostic tests.
+---------------------------------------------------------
 
-3. **Revenue Performance Analysis**
-   - Ranked diagnostic tests based on revenue contribution.
-   - Identified the highest revenue-generating tests.
 
-4. **Average Revenue Analysis**
-   - Calculated the average revenue generated per laboratory test.
+---------------------------------------------------------
+-- 3. Most Requested Tests
 
-5. **Branch Performance Analysis**
-   - Evaluated revenue contribution across laboratory branches.
+SELECT 
+Test_Name,
+COUNT(*) as Number_of_Tests
+FROM laboratory_sales_data
+GROUP BY Test_Name
+ORDER BY Number_of_Tests DESC;
 
-6. **Monthly Revenue Trend Analysis**
-   - Analysed revenue patterns over time to identify trends.
+---------------------------------------------------------
 
-### Key SQL Insights
+---------------------------------------------------------
+-- 4. Top Revenue-Generating Tests
+SELECT 
+Test_Name,
+SUM(Revenue_NGN) as Total_Revenue
+FROM laboratory_sales_data
+GROUP BY Test_Name
+ORDER BY Total_Revenue DESC
+LIMIT 10;
 
-- Generated a total revenue of NGN 5.6M from laboratory transactions.
-- Identified high-demand diagnostic tests based on test frequency.
-- Determined diagnostic tests contributing the highest revenue.
-- Evaluated branch revenue performance and monthly revenue patterns.
+---------------------------------------------------------
 
-### SQL Script
+---------------------------------------------------------
+-- 5. Average Revenue per Test
 
-The complete SQL queries used for this analysis are available here:
+SELECT 
+AVG(Revenue_NGN) AS Average_Revenue_Per_Test
+From laboratory_sales_data;
 
-[View SQL Queries](SQL/Laboratory_Sales_Analysis.sql) 
+---------------------------------------------------------
+
+---------------------------------------------------------
+-- 6. Revenue by Branch
+
+SELECT
+Branch,
+SUM(Revenue_NGN) AS Branch_Revenue
+FROM laboratory_sales_data
+GROUP BY Branch
+ORDER BY Branch_Revenue DESC;
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+-- 7. Monthly Revenue Trend
+
+SELECT
+MONTH(Date) AS Month,
+SUM(Revenue_NGN) AS Monthly_Revenue
+FROM laboratory_sales_data
+GROUP BY Month(Date)
+ORDER BY Month;
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+-- 8. Revenue by Tests
+
+SELECT
+Test_Name,
+SUM(Revenue_NGN) AS Test_Revenue
+FROM laboratory_sales_data
+GROUP BY Test_Name
+ORDER BY Test_Revenue DESC;
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+-- Key Insights
+--
+---------------------------------------------------------
+-- 1. Generated total rvenue of NGN 5.6M from laboratory transactions.
+-- 2. Identified the highest-demand diagnostic tests.
+-- 3. Determined the tests contributing the highest revenue.
+-- 4. Evaluated branch performance and monthly revenue patterns.
+
+---------------------------------------------------------
