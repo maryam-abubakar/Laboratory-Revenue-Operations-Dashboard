@@ -151,7 +151,7 @@ The following analyses were performed using MySQL:
 
 The complete SQL queries used for this analysis are available here:
 
-![View SQL Queries](SQL/Laboratory_Sales_Analysis.sql)
+[View SQL Queries](SQL/Laboratory_Sales_Analysis.sql)
 
 ------------------------------------------------------------------------
 
