@@ -29,7 +29,7 @@ data-driven decision-making.
 The interactive dashboard provides insights into laboratory revenue 
 performance, test demand, branch contribution, and customer distribution.
 
-[Laboratory Revenue Dashboard](Images/Dashboard_Preview.png/dashboard_preview.png)
+![Laboratory Revenue Dashboard](./Images/dashboard_preview_png)
 
 ------------------------------------------------------------------------
 
